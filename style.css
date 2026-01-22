@@ -1,0 +1,38 @@
+* {
+    font-family: system-ui;
+}
+
+#firstNumber {
+    color: black;
+    border: 1px solid powderblue;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#secondNumber {
+    color: black;
+    border: 1px solid powderblue;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#operators {
+    color: black;
+    border: 1px solid powderblue;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#calculate {
+    color: darkcyan;
+    border: 1px solid powderblue;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    background: powderblue;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <input type="text" id="firstNumber" name="firstNumber" />
+    <input type="text" id="secondNumber" name="secondNumber" />
+    <select name="operators" id="operators">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <br /><br />
+
+    <button id="calculate" onclick="performaceOperators()">Calculate</button>
+    <p id="results"></p>
+
+    
+
+    <script>
+
+        function performaceOperators() {
+
+            const first = parseFloat(document.getElementById("firstNumber").value);
+            const second = parseFloat(document.getElementById("secondNumber").value);
+            const selectedOperator = document.getElementById("operators").value;
+            
+            let results = "";
+
+            switch (selectedOperator) {
+
+                case "+":
+                   results =  first + second;
+                    break;
+                case "-":
+                    results =  first - second;
+                    break;
+                case "*":
+                    results =  first * second;
+                    break;
+                case "/":
+                    results =  first / second;
+                    break;
+                default:
+                    results = "Invalid value or operators";
+            }
+
+            let finalResults = document.getElementById("results");
+            finalResults.innerHTML = "Here's the output :- " + results;
+
+        }
+
+    </script>
+
+</body>
+</html>
