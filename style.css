@@ -36,3 +36,10 @@
     font-weight: 700;
     background: powderblue;
 }
+
+.parent {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 50px;
+}
