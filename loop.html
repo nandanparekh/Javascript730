@@ -1,78 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loop</title>
-    <link rel="stylesheet" href="/style.css">
-</head>
-<body>
-
-    <div class="parent">
-        <div>
-            <!-- Task : 1
-                Input Value to Loop Number till 50 as per the loop condition. 
-            -->
-            
-            <input type="text" id="firstNumber" name="firstNumber" />
-            <br /><br />
-
-            <button id="calculate" onclick="numberLoop()">Submit</button>
-            <p id="results"></p>
-        </div>
-
-        <div>
-            <!-- Task : 2
-                Input Value to Loop Table. 
-            -->
-            <input type="text" id="secondNumber" name="secondNumber" />
-            <br /><br />
-
-            <button id="calculate" onclick="tableLoop()">Submit</button>
-            <p id="tableResults"></p>
-        </div>
-    </div>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="result"></p>
     <script>
+      // let x = 3
+      // let y = x++
+      // console.log(x,y,"checkboth")
 
-        function numberLoop() {
+      let result = document.getElementById("result");
+      let output = "";
 
-            let i = document.getElementById("firstNumber").value;
-            let results = "";
+      // for(let i = 100; i > 0; i--){
+      //     output += i + "<br/>"
+      //     console.log(i,"check11")
+      // }
+      // console.log(i,"check18")
+      // result.innerHTML = output
 
-            for (; i <= 20; i++ ) {
-                
-                // console.log(i, "check26");
-                results += i + "<br />";
-            }
-            
-            let finalResults = document.getElementById("results");
-            finalResults.innerHTML = "Here's the Input Value :- <br />" + results;
+      // let i = 100;
+      // while (i <= 100) {
+      //     console.log(i,"check27")
+      //     output += i + "<br/>"
+      //     i++
+      // }
+      // result.innerHTML = output
+      let i = 100;
+      do {
+        console.log(i, "check28");
+        output += i + "<br/>";
+        i++;
+      } while (i <= 100);
 
-        }
-
-        function tableLoop() {
-
-           let x = parseInt(document.getElementById("secondNumber").value);
-           let y = 1 ;
-
-            // console.log (x*y, "check40")
-
-           let results = "";
-
-           while ( y <= 10 ) {
-                // console.log (x*y, "check61")
-                // results += x*y + "<br/>"
-                results += x + " * " + y + " = " + (x * y) + "<br/>";
-                y++;
-            }
-
-            let tableResults = document.getElementById("tableResults");
-            tableResults.innerHTML = "Here's the Table Given below Value :- <br />" + results;
-
-        }
-
+      result.innerHTML = output;
     </script>
-
-</body>
+  </body>
 </html>
